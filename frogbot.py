@@ -1,8 +1,8 @@
 import discord
-import os #allows us to readfiles
+import os 
 import random
 
-TOKEN = 'NTg5MzE1MDEwNDMwMzY5Nzky.XfFulA.5yjICum4hVwscRuhTP2LvX2u6IU'
+TOKEN = 'your token'
 
 client = discord.Client()
 
@@ -21,10 +21,10 @@ async def on_message(message):  #the functions that we make
         await message.channel.send('https://imgur.com/gallery/SU4Qa') #the gift that keeps on giving
 
     if message.content.startswith('!reeee'):
-        await message.channel.send('NORMIES REEEEEEEEEEEEEEEEEEEEEEEEEE')
+        await message.channel.send('REEEEEEEEEEEEEEEEEEEEEEEEEE')
 
     if message.content.startswith('!pepe'):
-        file_path = '//mnt//c//users//nickk//pictures//the_pepe_folder'
+        file_path = 'path to folder'
         picture_names = os.listdir(file_path)
         selected_picture = 'https://i.imgur.com/' + random.choice(picture_names)   #python is a language of LOGIC
         await message.channel.send(selected_picture)
@@ -39,7 +39,3 @@ async def on_ready():
     print('Is Active')
 
 client.run(TOKEN)
-
-#task to do
-#1 get file import
-#create more responses
